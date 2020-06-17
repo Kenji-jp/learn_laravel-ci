@@ -14,6 +14,7 @@ jobs:
             - vendor
       - restore_cache:
           key: npm-v1-{{ checksum "package-lock.json" }}
+      - run: npm ci 
       - run:
           name: npm ci
           command: |
